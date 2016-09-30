@@ -1,0 +1,11 @@
+<div class="md-display-3">Pick You're Fight</div>
+
+<div layout="row" layout-wrap>
+    <div flex="20" ng-repeat="evilDweler in vm.evilDwelers" ng-click="vm.select(evilDweler)">
+        <md-button class="md-fab md-mini md-primary" style="width: 200px;height: 200px;">
+            <md-icon style="color: greenyellow;">
+                <img class="circleImg" ng-src="{{evilDweler.icon}}" style="margin-left: -50px; margin-top: -50px;">
+            </md-icon>
+        </md-button>
+    </div>
+</div>

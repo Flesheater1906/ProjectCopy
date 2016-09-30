@@ -1,0 +1,106 @@
+<!--player img/ name-->
+<div id="background">
+    <div>
+        <img ng-src="{{vm.get_gravatar_image_url()}}" class="md-avatar" alt="{{item.who}}">
+        <span class="playerTitle">Alberto Todd</span>
+    </div>
+    {{ parent.displayName }}
+    <!--my stats-->
+
+    <!--top players-->
+
+    <md-content class="md-padding">
+        <md-tabs class="md-warn" md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
+            <md-tab id="tab1">
+                <md-tab-label>Player Info</md-tab-label>
+                <md-tab-body>
+                    <table style="width:100%; border: solid gray 2px; background-color: gray">
+                          <tr>
+                            <th>Game Name</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                          </tr>
+                        <tr>
+                            <td style="border: solid #EF6C00 2px">Jill</td>
+                            <td style="border: solid #EF6C00 2px">60</td>
+                            <td style="border: solid #EF6C00 2px">50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>80</td>
+                            <td>94</td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #EF6C00 2px">Jill</td>
+                            <td style="border: solid #EF6C00 2px">60</td>
+                            <td style="border: solid #EF6C00 2px">50</td>
+                        </tr>
+                        <tr>
+                            <td>Jill</td>
+                            <td>60</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #EF6C00 2px">Jill</td>
+                            <td style="border: solid #EF6C00 2px">60</td>
+                            <td style="border: solid #EF6C00 2px">50</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>84</td>
+                            <td>80</td>
+                        </tr>
+                    </table>
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab2">
+                <md-tab-label>Top Players</md-tab-label>
+                <md-tab-body>
+                    <table style="width:100%; border: solid gray 2px; background-color: gray">
+                          <tr>
+                            <th>Game Name</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                          </tr>
+                        <tr>
+                            <td style="border: solid #EF6C00 2px">Jill</td>
+                            <td style="border: solid #EF6C00 2px">60</td>
+                            <td style="border: solid #EF6C00 2px">50</td>
+                        </tr>
+                        <tr>
+                            <td>Eve</td>
+                            <td>80</td>
+                            <td>94</td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #EF6C00 2px">Jill</td>
+                            <td style="border: solid #EF6C00 2px">60</td>
+                            <td style="border: solid #EF6C00 2px">50</td>
+                        </tr>
+                        <tr>
+                            <td>Jill</td>
+                            <td>60</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #EF6C00 2px">Jill</td>
+                            <td style="border: solid #EF6C00 2px">60</td>
+                            <td style="border: solid #EF6C00 2px">50</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>84</td>
+                            <td>80</td>
+                        </tr>
+                    </table>
+                </md-tab-body>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+    <footer>
+        <button class="specialButton" ng-click="battle()" ui-sref="characterSelect">
+            To Battle
+        </button>
+    </footer>
+</div>
+<!--battle-->

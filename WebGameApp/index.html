@@ -1,0 +1,89 @@
+<html ng-app="myApp">
+<head>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link href="node_modules/angular-jk-carousel/dist/jk-carousel.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/css.css">
+    <title>AppGame</title>
+</head>
+
+<body style="background-color: firebrick;" >
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+<script src="node_modules/angular-messages/angular-messages.js"></script>
+<script src="node_modules/angular-material/angular-material.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+<script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+<script src="node_modules/angular-jk-carousel/dist/jk-carousel.js"></script>
+<script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+<!-- Firebase    -->
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+
+<!--other injections/ scripts-->
+<script src="Scripts/app.js"></script>
+<script src="Scripts/components/home.component.js"></script>
+<script src="Scripts/firebaseConfig.js"></script>
+<script src="Scripts/components/playerInfo.component.js"></script>
+<script src="Scripts/components/battle.component.js"></script>
+<script src="Scripts/components/characterSelect.component.js"></script>
+<script src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
+<script src="service/character.service.js"></script>
+
+
+<!--scripts-->
+
+<script src="Scripts/menus.js"></script>
+<md-toolbar class="md-hue-2" ng-controller="AppCtrl as ctrl">
+    <div class="md-toolbar-tools" style="background-color: #3856ff;">
+        <h2>
+            <span ui-sref="main" >Super sweet Game</span>
+        </h2>
+        <span flex=""></span>
+        <md-button ng-if="!displayName" aria-label="Login" class="md-primary md-raised" ng-click="showAdvanced($event)">
+            Login
+        </md-button>
+        <md-menu ng-if="displayName">
+            <md-button aria-label="open name menu" ng-click="openNameMenu($mdOpenMenu, $event)">
+               {{displayName}}
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <md-button ng-click="playerInfo()"  ui-sref="playerInfo">
+                        <md-icon md-svg-icon="call:dialpad" md-menu-align-target=""></md-icon>
+                        Player Info
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button ng-click="battle()" ui-sref="characterSelect">
+                        <md-icon md-svg-icon="call:voicemail"></md-icon>
+                        Battle!
+                    </md-button>
+                </md-menu-item>
+                <md-menu-divider></md-menu-divider>
+                <md-menu-item>
+                    <md-button ng-click="signOut()">
+                        <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>
+                        Sign Out
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </div>
+</md-toolbar>
+
+<md-content layout-padding style=" background-color: firebrick">
+    <ui-view player="displayName"></ui-view>
+</md-content>
+
+</body>
+</html>

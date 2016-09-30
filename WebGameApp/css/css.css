@@ -1,0 +1,104 @@
+.body{
+    background-color: azure;
+}
+.tilte{
+    background-color: #3383FF;
+}
+md-card.md-default-theme, md-card {
+    background-color: orange;
+    border-radius: 155px;
+}
+element.style{
+    background-color: rebeccapurple;
+}
+.backgrounds{
+    background-color: rebeccapurple;
+}
+.cardTwo{
+    background-color: orange;
+    border-radius: 155px;
+}
+.textGroup{
+    margin-left: 34%;
+}
+.evilbleererer{
+    visibility: hidden;
+    height: 100px;
+    border:solid;
+    background-color: green;
+}
+.evilName{
+    height: 100px;
+    border:solid;
+    background-color: green;
+}
+.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+    color: white; }
+.playerTitle {
+    color: orange;
+    text-align: right;
+    font-size: 30px;
+}
+.button1 {
+    width: 600px;
+    color: orange;
+    background-color: red;
+    font-size: 40px;
+    padding: 15px 30px;
+    float: right;
+}
+.button2 {
+    width: 600px;
+    color: orange;
+    float: left;
+    background-color: red;
+    font-size: 40px;
+    padding: 15px 30px;
+}
+.what {
+    width: 49%;
+    display: inline-block;
+}
+.specialButton {
+    color: white;
+    background-color: #EF6C00;
+    width: 39%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 100px;
+    margin-top: 15%;
+    font-size: 80px;
+    border-radius: 80px;
+}
+.specialButton:active {
+    color: blue;
+    background-color: orange;
+    width: 39%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 100px;
+    margin-top: 15%;
+    font-size: 80px;
+    border-radius: 80px;
+}
+th {
+    border: solid blue 2px;
+}
+td {
+    border: solid blue 2px;
+}
+tr {
+    border: solid blue 2px;
+}
+#background {
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.circleImg {
+    border-radius: 100%;
+}
+.circleImg2 {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
